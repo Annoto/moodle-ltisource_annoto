@@ -36,8 +36,7 @@ use core_course_category;
 function ltisource_annoto_before_launch($instance, $endpoint, $requestparams) {
     global $COURSE;
 
-    $course = clone $COURSE;
-    $category = core_course_category::get($course->category);
+    $category = core_course_category::get($COURSE->category);
 
     $name = $category->name;
 
